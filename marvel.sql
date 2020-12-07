@@ -77,7 +77,9 @@ DELETE FROM movies
 WHERE title IN ('Ant-Man','Black Panther')
 RETURNING *;
 DELETE FROM movies
-WHERE year  <> 2014
+-- WHERE year <> 2014
+WHERE year  = 2014 OR title = 'Thor'
+-- AND, BETWEEN, LIKE, NOT, IS NULL, can also be used
 RETURNING *;
 
 
